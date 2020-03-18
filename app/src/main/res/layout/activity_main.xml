@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2196F3"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/username_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="@string/usernameHint"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/email_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="@string/emailHint"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/username_editText_register"
+        app:layout_constraintStart_toStartOf="@+id/username_editText_register"
+        app:layout_constraintTop_toBottomOf="@id/username_editText_register"
+        android:autofillHints="" />
+
+    <EditText
+        android:id="@+id/password_editText_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="10dp"
+        android:background="#fff"
+        android:ems="10"
+        android:hint="@string/passwordHint"
+        android:paddingLeft="16dp"
+        android:paddingStart="16dp"
+        android:paddingRight="16dp"
+        android:paddingEnd="16dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/email_editText_register"
+        app:layout_constraintStart_toStartOf="@+id/email_editText_register"
+        app:layout_constraintTop_toBottomOf="@id/email_editText_register"
+        android:autofillHints="" />
+
+    <Button
+        android:id="@+id/registerButton_button_register"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:text="@string/registerButton"
+        app:layout_constraintEnd_toEndOf="@+id/password_editText_register"
+        app:layout_constraintStart_toStartOf="@+id/password_editText_register"
+        app:layout_constraintTop_toBottomOf="@id/password_editText_register"/>
+
+    <TextView
+        android:id="@+id/loginButton_textView_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="@string/goToLoginPage"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/registerButton_button_register"
+        app:layout_constraintStart_toStartOf="@+id/registerButton_button_register"
+        app:layout_constraintTop_toBottomOf="@id/registerButton_button_register" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
