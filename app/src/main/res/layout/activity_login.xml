@@ -23,7 +23,7 @@
         android:paddingRight="16dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:hint="@string/usernameHint"
+        android:hint="@string/emailHint"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
