@@ -5,7 +5,8 @@
     <string name="passwordHint">Password</string>
     <string name="passwordConfirmHint">Re-enter Password</string>
     <string name="registerButton">REGISTER</string>
-    <string name="goToLoginPage">Already have an account? Login here!</string>
-    <string name="goToRegisterPage">Don\'t Have an account? Register here!</string>
+    <string name="goToLoginPage"><u>Already have an account? Login here!</u></string>
+    <string name="goToRegisterPage"><u>Don\'t Have an account? Register here!</u></string>
     <string name="loginButton">LOGIN</string>
+    <string name="selectImage">SELECT IMAGE</string>
 </resources>

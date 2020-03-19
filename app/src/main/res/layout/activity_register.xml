@@ -5,30 +5,53 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#2196F3"
-    tools:context=".MainActivity">
+    tools:context=".RegisterActivity">
+
+    <Button
+        android:id="@+id/photo_button_register"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/ui_rounded_images"
+        android:text="@string/selectImage"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/photoCircle_imageView_register"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:civ_border_width="5dp"
+        app:civ_border_color="@color/colorAccent"
+        app:layout_constraintBottom_toBottomOf="@+id/photo_button_register"
+        app:layout_constraintEnd_toEndOf="@+id/photo_button_register"
+        app:layout_constraintStart_toStartOf="@+id/photo_button_register"
+        app:layout_constraintTop_toTopOf="@+id/photo_button_register" />
 
 
     <EditText
         android:id="@+id/username_editText_register"
         android:layout_width="0dp"
         android:layout_height="50dp"
+        android:layout_marginTop="32dp"
         android:layout_marginStart="32dp"
         android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginRight="32dp"
+        android:autofillHints=""
         android:background="@drawable/ui_edit_text"
         android:ems="10"
         android:hint="@string/usernameHint"
-        android:paddingLeft="16dp"
-        android:paddingStart="16dp"
-        android:paddingRight="16dp"
-        android:paddingEnd="16dp"
         android:inputType="textPersonName"
+        android:paddingStart="16dp"
+        android:paddingLeft="16dp"
+        android:paddingEnd="16dp"
+        android:paddingRight="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:autofillHints="" />
+        app:layout_constraintTop_toBottomOf="@+id/photo_button_register" />
 
     <EditText
         android:id="@+id/email_editText_register"
