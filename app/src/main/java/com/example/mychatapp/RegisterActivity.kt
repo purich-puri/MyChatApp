@@ -137,6 +137,11 @@ class RegisterActivity : AppCompatActivity() {
         ref.setValue(user)
             .addOnSuccessListener { task ->
                 Log.d("RegisterActivity", "Registered successfully to firebase database: $task")
+
+                val intent = Intent(this, ChatActivity::class.java)
+                //clear all other opened activity
+                intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener { task ->
                 Log.d("RegisterActivity", "Failed to register to database: $task")
@@ -144,4 +149,6 @@ class RegisterActivity : AppCompatActivity() {
     }
 }
 
-class User(val uid: String, val username: String, val profilePhotoURL: String)
+class User(val uid: String, val username: String, val profilePhotoURL: String){
+    constructor() : this("","","")
+}

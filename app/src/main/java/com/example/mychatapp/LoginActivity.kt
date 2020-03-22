@@ -34,6 +34,9 @@ class LoginActivity: AppCompatActivity() {
         FirebaseAuth.getInstance().signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this){ task ->
                 Log.d("LoginActivity", "Logged in as: ${task.result?.user?.uid}")
+                val intent = Intent(this, ChatActivity::class.java)
+                Intent.FLAG_ACTIVITY_CLEAR_TASK.or(Intent.FLAG_ACTIVITY_NEW_TASK)
+                startActivity(intent)
             }
             .addOnFailureListener(this){ task ->
                 Log.d("Login Activity", "Failed to login: ${task.message}")
